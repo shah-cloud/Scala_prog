@@ -1,0 +1,11 @@
+class Person {
+private var privateAge = 0 // Make private and rename
+var age = privateAge	// here if the age is greater so it update theage 
+def age_=(newValue: Int) {
+if (newValue > privateAge) privateAge = newValue; // Can’t get younger
+}
+}
+val fred = new Person
+fred.age = 30
+fred.age = 31
+println(fred.age)
